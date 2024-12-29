@@ -3,6 +3,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
+import "../global.css";
 export default function App() {
   const insets = useSafeAreaInsets();
   return (
@@ -27,7 +28,12 @@ export default function App() {
           }}
         >
           <Text style={{ color: "black" }}>INDEX</Text>
-          <Link href="/about">About</Link>
+          <Link
+            href="/about"
+            className="text-xl text-white bg-slate-600 p-5 rounded-lg"
+          >
+            About
+          </Link>
         </View>
       </View>
     </SafeAreaProvider>
